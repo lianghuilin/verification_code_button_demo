@@ -27,6 +27,7 @@ class VerificationCodeButtonView extends StatelessWidget {
                 width: 315,
                 height: 40,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
                       width: 50,
@@ -51,7 +52,26 @@ class VerificationCodeButtonView extends StatelessWidget {
                       child: Text("+86", style: _textStyleContent()),
                     ),
                     Text('data'),
-                    OutlinedButton(onPressed: () {}, child: Text('获取验证码')),
+                    ElevatedButton(
+                      onPressed: null,
+                      child: Text('获取验证码'),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                          Colors.white,
+                        ),
+                        foregroundColor: MaterialStateProperty.all(
+                          Colors.black,
+                        ),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(0),
+                                side: BorderSide(color: Colors.grey, width: 0),
+                              ),
+                            ),
+                      ),
+                    ),
+                    // OutlinedButton(style: ButtonStyle(), onPressed: () {}, child: Text('获取验证码')),
                   ],
                 ),
               ),
