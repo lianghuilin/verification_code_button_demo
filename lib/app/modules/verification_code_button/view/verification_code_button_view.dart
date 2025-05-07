@@ -20,7 +20,7 @@ class VerificationCodeButtonView extends StatelessWidget {
             Center(
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.grey[200],
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: Colors.grey, width: 1),
                 ),
@@ -29,7 +29,7 @@ class VerificationCodeButtonView extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      width: 90,
+                      width: 50,
                       height: 40,
                       padding: EdgeInsets.only(left: 16, top: 8, bottom: 8),
                       decoration: BoxDecoration(
@@ -50,6 +50,8 @@ class VerificationCodeButtonView extends StatelessWidget {
                       clipBehavior: Clip.antiAlias,
                       child: Text("+86", style: _textStyleContent()),
                     ),
+                    Text('data'),
+                    OutlinedButton(onPressed: () {}, child: Text('获取验证码')),
                   ],
                 ),
               ),
